@@ -1,0 +1,163 @@
+* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f6f1f1;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: rgb(19, 1, 1);
+  background-color: #ffe0e0;
+}
+.colour{
+    color: rgb(8, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fcd5ce;
+}
+
+.hero {
+  background-image: url('https://source.unsplash.com/1600x600/?food,kitchen');
+  background-size: cover;
+  background-position: center;
+  padding: 20px 20px;
+  text-align: center;
+  color: rgb(247, 162, 139);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ffe0e0;
+  color: rgb(3, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.featured-recipes {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.featured-recipes h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.recipe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+.card {
+  background-color: #fff3f3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height:300px;
+}
+.card a{
+  color: black;
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffe0e0;
+  font-size: 0.9rem;
+}
+.search-box {
+  position: relative;
+  width: 300px;
+  margin: 20px 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #ff6f61; /* or any highlight color */
+  box-shadow: 0 0 5px rgba(255,111,97,0.7);
+}
+
+.autocom-box {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: none; /* hidden by default */
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.autocom-box li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.autocom-box li:hover {
+  background-color: #ffe0e0;
+}

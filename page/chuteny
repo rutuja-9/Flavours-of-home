@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coconut Chutney Recipe | Flavour Of Home</title>
+  <link rel="stylesheet" href="recipe_all.css">
+</head>
+<body>
+  <header>
+    <h1>Coconut Chutney</h1>
+    <p>A creamy and refreshing chutney made with coconut and tempered spices – the perfect side for dosa, idli, and vada.</p>
+  </header>
+
+  <div class="recipe-container">
+    <img src="C:\Users\91876\OneDrive\Desktop\Flavours of home\images\south\chutney.jpg" alt="Coconut Chutney" class="recipe-image">
+
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 cup grated fresh coconut</li>
+        <li>2 tbsp roasted chana dal (daliya)</li>
+        <li>1 green chili (adjust to taste)</li>
+        <li>1/2 inch ginger piece</li>
+        <li>Salt to taste</li>
+        <li>Water as required</li>
+        <li>For tempering:</li>
+        <li>1 tsp oil</li>
+        <li>1/2 tsp mustard seeds</li>
+        <li>5-6 curry leaves</li>
+        <li>1 dry red chili</li>
+      </ul>
+    </section>
+
+    <section class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>Grind coconut, roasted chana dal, green chili, ginger, salt, and water to a smooth chutney.</li>
+        <li>Adjust the thickness with water as needed.</li>
+        <li>Heat oil in a small pan and add mustard seeds.</li>
+        <li>Once they splutter, add curry leaves and dry red chili.</li>
+        <li>Pour this tempering over the chutney and mix well.</li>
+        <li>Serve fresh with dosa, idli, vada, or uttapam.</li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>

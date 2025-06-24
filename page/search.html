@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Search Recipes - Flavour Of Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f0f0;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            color: #d68b82;
+        }
+        #searchInput {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #d68b82;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 20px;
+        }
+        .recipe-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .recipe-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin-top: 10px;
+            color: #4a4a4a;
+        }
+        .no-results {
+            color: #a44a3f;
+            font-weight: bold;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Search Recipes</h1>
+
+<input type="text" id="searchInput" placeholder="Type recipe name to search..." />
+
+<div id="results"></div>
+
+<script>
+    // List of recipes you want to search through.
+    // Add your recipes here with their name and image path.
+    const recipes = [
+        { name: "Pizza", image: "../images/fastfood/pizza.jpg" },
+        { name: "Idli", image: "../images/southindian/idli.jpg" },
+        { name: "Paneer Butter Masala", image: "../images/vegetarian/paneer-butter-masala.jpg" },
+        { name: "Gulab Jamun", image: "../images/sweets/gulab-jamun.jpg" },
+        { name: "Upma", image: "../images/breakfast/upma.jpg" },
+        { name: "Poha", image: "../images/breakfast/poha.jpg" },
+        { name: "Masala Chai", image: "../images/drinks/masala-chai.jpg" },
+        // Add more recipes here
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const resultsDiv = document.getElementById("results");
+
+    function displayRecipes(filteredRecipes) {
+        resultsDiv.innerHTML = ""; // Clear previous results
+
+        if (filteredRecipes.length === 0) {
+            resultsDiv.innerHTML = '<div class="no-results">No recipes found. Try a different search.</div>';
+            return;
+        }
+
+        filteredRecipes.forEach(recipe => {
+            const card = document.createElement("div");
+            card.classList.add("recipe-card");
+
+            const img = document.createElement("img");
+            img.src = recipe.image;
+            img.alt = recipe.name;
+
+            const title = document.createElement("h3");
+            title.textContent = recipe.name;
+
+            card.appendChild(img);
+            card.appendChild(title);
+            resultsDiv.appendChild(card);
+        });
+    }
+
+    // Initial display of all recipes
+    displayRecipes(recipes);
+
+    // Listen for input in the search box
+    searchInput.addEventListener("input", function() {
+        const query = this.value.toLowerCase().trim();
+        const filtered = recipes.filter(recipe => recipe.name.toLowerCase().includes(query));
+        displayRecipes(filtered);
+    });
+</script>
+
+</body>
+</html>
